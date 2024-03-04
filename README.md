@@ -24,12 +24,12 @@ i think the npm pacakge for the types is something like `@types/office-js`.
 
 ```bash
 # to run TSC
-$ npx tsc .\static\js\thoc.ts --watch
+$ npx tsc .\static\js\thoc.ts [--watch]
 
 # to run tailwind
-$ npx tailwindcss -i .\static\css\main.css -o .\static\css\tailwind.css --watch
+$ npx tailwindcss -i .\static\css\main.css -o .\static\css\tailwind.css [--watch]
 
-# to run the server on windows
+# to run the server on windows [assuming venv]
 .\Scripts\activate
 python server.py
 ```
