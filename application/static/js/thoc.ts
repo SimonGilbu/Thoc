@@ -22,18 +22,9 @@ function setMessage(text: string) {
 function changeShapePositionTop(ev: Event) {
     PowerPoint.run(async (context) => {
         const htmlInput = ev.target as HTMLInputElement;
-        // each point is 0.35mm
-        // input is by default cm, so we need to do some conversion
-        // to make the math math
-        let changeValue = parseFloat(htmlInput.value) ?? 0;
-        if (changeValue != 0) {
-            changeValue = changeValue / _POSTSCRIPT_POINT;
-        }
-
-        if (!changeValue) {
-            console.log("cant change the value");
-            return;
-        }
+        let changeValue = parseFloat(htmlInput.value);
+        // apply the conversion from CM to PostScript Points
+        changeValue = changeValue / _POSTSCRIPT_POINT;
         const shape = context.presentation.getSelectedShapes().getItemAt(0);
         shape.top = changeValue;
     });
