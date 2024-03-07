@@ -21,38 +21,7 @@
         </p>
     </div>
 
-    <div>
-        <h1 class="text-2xl font-bold">
-            Position 😎
-        </h1>
-
-        <div class="p-2 bg-blue-50 grid gap-2">
-            <div class="flex">
-                <p>
-                    Top
-                </p>
-                <input id="shapePositionTopInput" class="mr-0 ml-auto" type="number" />
-            </div>
-            <div class="flex">
-                <p>
-                    Left
-                </p>
-                <input id="shapePositionLeftInput" class="mr-0 ml-auto" type="number" />
-            </div>
-            <div class="flex">
-                <p>
-                    Height
-                </p>
-                <input id="shapeSizeHeightInput" class="mr-0 ml-auto" type="number" />
-            </div>
-            <div class="flex">
-                <p>
-                    Width
-                </p>
-                <input id="shapeSizeWidthInput" class="mr-0 ml-auto" type="number" />
-            </div>
-        </div>
-    </div>
+    {% include "modules/size-and-pos.jinja" %}
 
     <div class="mb-0 mt-auto">
         <p id="setMessageDisplayElement">
